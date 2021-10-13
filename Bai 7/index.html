@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" id="soA">X^2 +
+<input type="text" id="soB">X +
+<input type="text" id="soC"> = 0;
+<button onclick="giai_pt_bac_hai()">Check</button>
+<h3 id="result"></h3>
+<script>
+    function giai_pt_bac_hai() {
+        let a = +document.getElementById('soA').value;
+        let b = +document.getElementById('soB').value;
+        let c = +document.getElementById('soC').value;
+        let delta = b * b - 4 * a * c;
+        let X1 = (-b - Math.sqrt(delta)) / 2 * a;
+        let X2 = (-b + Math.sqrt(delta)) / 2 * a;
+        if (a === 0) {
+            document.getElementById('result').innerHTML = 'PT bậc nhất'
+        } else {
+            if (delta > 0) {
+                document.getElementById('result').innerHTML = 'PT có nghiệm X1=' + ' ' + X1
+                'và X2=' + ' ' + X2;
+            } else if (delta === 0) {
+                document.getElementById('result').innerHTML = 'PT có nghiệm kép X=' + ' ' + (-b / 2 * a);
+
+            } else {
+                document.getElementById('result').innerHTML = 'PT vô nghiệm'
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

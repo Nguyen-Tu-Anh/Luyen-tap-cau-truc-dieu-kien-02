@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = +prompt('Thu nhập tính thuế của bạn / tháng (triệu đồng) ')
+    if (money === 5) {
+        document.write('Số tiền bạn cần đóng thuế là:' + ' ' + ((money * 5 / 100) * 1000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            + ' VND')
+    } else if (money > 5 && money <= 10) {
+        document.write('Số tiền bạn cần đóng thuế là:' + ' ' + (((money - 5) * 10 / 100 + 5 * 5 / 100) * 1000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            + ' VND')
+
+    } else if (money > 10 && money <= 18) {
+        document.write('Số tiền bạn cần đóng thuế là:' + ' ' + (((money - 10) * 15 / 100 + 5 * 10 / 100 + 5 * 5 / 100) * 1000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            + ' VND')
+    }
+</script>
+</body>
+</html>

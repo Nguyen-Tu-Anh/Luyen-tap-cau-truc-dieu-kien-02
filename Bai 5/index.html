@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div>
+
+
+    <lable>Nhập độ dài cạnh 1<input type="text" id="canh1"></lable>
+    <br>
+    <lable>Nhập độ dài cạnh 2<input type="text" id="canh2"></lable>
+    <br>
+    <button onclick="area()">Check</button>
+    <h3 id="result"></h3>
+</div>
+<script>
+    function area() {
+        let a = +document.getElementById('canh1').value;
+        let b = +document.getElementById('canh2').value;
+        let area = 1 / 2 * a * b;
+        document.getElementById('result').innerHTML= 'dien tich tam giac la:' + ' '+ area;
+    }
+</script>
+</body>
+</html>

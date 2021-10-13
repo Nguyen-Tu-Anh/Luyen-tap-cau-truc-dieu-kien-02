@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số điện: <input type="text" id="number">
+<button onclick="tinh_tien_dien()">Calculate</button>
+<h3 id="result"></h3>
+<script>
+    function tinh_tien_dien() {
+        let electricNumber = +document.getElementById('number').value;
+        let money = electricNumber * 2300;
+
+        if (electricNumber <= 100) {
+            document.getElementById('result').innerHTML = money;
+        } else if (electricNumber > 100 && electricNumber <= 200) {
+            document.getElementById('result').innerHTML = 100 * 2300 + (electricNumber - 100) * 2500;
+        } else if (electricNumber > 200) {
+            document.getElementById('result').innerHTML = 100 * 2300 + 100 * 2500 + (electricNumber - 200) * 2700;
+        }
+    }
+
+
+</script>
+</body>
+</html>

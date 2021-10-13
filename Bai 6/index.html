@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="soA">X
++ <input type="text" id="soB"> = 0;
+<button onclick="giai_pt_bac_nhat()">Kiem tra nghiem</button>
+<h3 id="result"></h3>
+<script>
+    function giai_pt_bac_nhat() {
+        let a = +document.getElementById('soA').value;
+        let b = +document.getElementById('soB').value;
+        let c = -b / a;
+        if (a === 0) {
+            if (b === 0) {
+                document.getElementById('result').innerHTML = 'PT co vo so nghiem'
+            } else {
+                document.getElementById('result').innerHTML = 'PT vo nghiem'
+            }
+        } else {
+            document.getElementById('result').innerHTML = 'PT co nghiem:' + ' ' + 'X =' + c;
+
+        }
+    }
+</script>
+</body>
+</html>

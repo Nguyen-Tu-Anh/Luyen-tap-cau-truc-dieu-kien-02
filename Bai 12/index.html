@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Ngân hàng ABC với lãi suất 0.5%/tháng <br> <br>
+Số tiền ban đầu: <input type="text" id="money"> <br> <br>
+Số tháng gửi: <input type="text" id="month"><br> <br>
+<button onclick="lai_kep_ngan_hang()">Check</button>
+<br> <br>
+Tổng số tiền là: <p id="result1"></p>
+Số tiền lãi là: <p id="result2"></p>
+<script>
+    function lai_kep_ngan_hang() {
+        let moNey = +document.getElementById('money').value;
+        let monTh = +document.getElementById('month').value;
+        let totalMoney = moNey * Math.pow(1 + 0.5 / 100, monTh)
+        let interest = totalMoney - moNey;
+        document.getElementById('result1').innerHTML = totalMoney;
+        document.getElementById('result2').innerHTML = interest;
+    }
+
+</script>
+
+</body>
+</html>
